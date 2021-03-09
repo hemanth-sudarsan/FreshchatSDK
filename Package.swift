@@ -1,30 +1,22 @@
 // swift-tools-version:5.3
 import PackageDescription
 let package = Package(
-    name: "MyLibrary",
+    name: "FreshchatSDK",
     platforms: [
         .iOS(.v8)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "FreshchatSDK",
-            targets: ["FreshchatSDK"])
+            targets: [
+              "FreshchatSDKTarget"
+            ]
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
-                    name: "FreshchatSDK",
-                    path: "libFDFreshchatSDK.a"
-                ),
-        .target(
-            name: "FreshchatSDK",
-          resources: [
-              .process("FCLocalization.bundle"),
-              .process("FCResources.bundle"),
-              .process("FreshchatModels.bundle"),
-              .process("libFDFreshchatSDK.a")]
+            name: "FreshchatSDKTarget",
+            path: "FreshchatSDK.xcframework"
         )
     ]
 )
