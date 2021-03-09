@@ -7,8 +7,8 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Intercom",
-            targets: ["Intercom"]),
+            name: "FreshchatSDK",
+            targets: ["FreshchatSDKTarget"]),
     ],
     targets: [
         .binaryTarget(
