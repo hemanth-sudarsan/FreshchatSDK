@@ -5,10 +5,15 @@ let package = Package(
     platforms: [
         .iOS(.v8)
     ],
+    products: [
+        .library(
+            name: "Intercom",
+            targets: ["Intercom"]),
+    ],
     targets: [
         .binaryTarget(
             name: "FreshchatSDKTarget",
             path: "FreshchatSDK.xcframework"
-        )
+        ),
     ]
 )
