@@ -15,5 +15,11 @@ let package = Package(
             name: "FreshchatSDKTarget",
             path: "FreshchatSDK.xcframework"
         ),
+        .target(
+                name: "FreshchatSDKResources",
+                resources: [
+                    .process("FCLocalization.bundle"),
+                    .process("FCResources.bundle")]
+            ),
     ]
 )
